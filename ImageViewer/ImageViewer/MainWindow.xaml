@@ -1,0 +1,34 @@
+﻿<Window x:Class="ImageViewer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ImageViewer"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+
+    <Window.ContextMenu>
+        <ContextMenu>
+            <MenuItem Header="Paste" Command="ApplicationCommands.Paste" Click="MenuItem_Click" IsEnabled="True"/>
+            <MenuItem Header="Exit" Command="ApplicationCommands.Stop" Click="MenuItem_Click" IsEnabled="True"/>
+        </ContextMenu>
+    </Window.ContextMenu>
+ 
+    <Grid Name="ImageGrid" 
+          Background="#FF808080"
+          AllowDrop="true"
+          Drop="ImageGrid_Drop"
+          DragEnter="ImageGrid_DragEnter">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Image x:Name="image">
+            <Image.Source>
+                <BitmapImage UriSource="/images/halloween 2.jpg"/>
+            </Image.Source>
+        </Image>
+    </Grid>
+</Window>
