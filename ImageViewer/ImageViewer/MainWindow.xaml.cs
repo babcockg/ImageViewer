@@ -31,11 +31,17 @@ namespace ImageViewer
                 new CommandBinding(ApplicationCommands.Paste, PasteExecuted, CanPaste));
             CommandBindings.Add(
                 new CommandBinding(ApplicationCommands.Stop, StopExecuted, CanStop));
+            InputBindings.Add(
+                new KeyBinding(ApplicationCommands.Paste, new KeyGesture(Key.V, ModifierKeys.Control) ));
+            InputBindings.Add(
+                new KeyBinding(ApplicationCommands.Stop, new KeyGesture(Key.Q, ModifierKeys.Control)));
+
             Focus();
         }
 
         private void PasteExecuted(object sender, ExecutedRoutedEventArgs e)
         {
+            PasteFromClipboard();
         }
 
         private void CanPaste(object sender, CanExecuteRoutedEventArgs e)
@@ -45,6 +51,7 @@ namespace ImageViewer
 
         private void StopExecuted(object sender, ExecutedRoutedEventArgs e)
         {
+            Application.Current.Shutdown();
         }
 
         private void CanStop(object sender, CanExecuteRoutedEventArgs e)
@@ -82,20 +89,26 @@ namespace ImageViewer
             }
         }
 
+        private void PasteFromClipboard()
+        {
+            if (Clipboard.GetDataObject().GetDataPresent("Bitmap"))
+            {
+                object o = Clipboard.GetDataObject().GetData("Bitmap");
+                if (o != null)
+                {
+                    var s = ClipboardImages.ImageFromClipboardDib();
+                    image.Source = s;
+                }
+            }
+
+        }
+
         private void MenuItem_Click(object sender, RoutedEventArgs e)
         {
             MenuItem mItem = sender as MenuItem;
             if (mItem.Header.Equals("Paste"))
             {
-                if (Clipboard.GetDataObject().GetDataPresent("Bitmap"))
-                {
-                    object o = Clipboard.GetDataObject().GetData("Bitmap");
-                    if (o != null)
-                    {
-                        var s = ClipboardImages.ImageFromClipboardDib();
-                        image.Source = s;
-                    }
-                }
+                PasteFromClipboard();
             }
             if (mItem.Header.Equals("Exit"))
             {
@@ -103,6 +116,9 @@ namespace ImageViewer
             }
         }
 
-
+        private void CommandBinding_Executed(object sender, ExecutedRoutedEventArgs e)
+        {
+            PasteFromClipboard();
+        }
     }
 }

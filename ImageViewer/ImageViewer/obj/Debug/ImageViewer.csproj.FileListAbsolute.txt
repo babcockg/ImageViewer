@@ -1,1 +1,15 @@
 C:\Users\galen\documents\visual studio 2015\Projects\ImageViewer\ImageViewer\bin\Debug\ImageViewer.exe.config
+C:\Users\galen\Source\Repos\ImageViewer\ImageViewer\ImageViewer\bin\Debug\ImageViewer.exe.config
+C:\Users\galen\Source\Repos\ImageViewer\ImageViewer\ImageViewer\bin\Debug\ImageViewer.exe
+C:\Users\galen\Source\Repos\ImageViewer\ImageViewer\ImageViewer\bin\Debug\ImageViewer.pdb
+C:\Users\galen\Source\Repos\ImageViewer\ImageViewer\ImageViewer\obj\Debug\ImageViewer.csprojResolveAssemblyReference.cache
+C:\Users\galen\Source\Repos\ImageViewer\ImageViewer\ImageViewer\obj\Debug\MainWindow.g.cs
+C:\Users\galen\Source\Repos\ImageViewer\ImageViewer\ImageViewer\obj\Debug\App.g.cs
+C:\Users\galen\Source\Repos\ImageViewer\ImageViewer\ImageViewer\obj\Debug\ImageViewer_MarkupCompile.cache
+C:\Users\galen\Source\Repos\ImageViewer\ImageViewer\ImageViewer\obj\Debug\ImageViewer_MarkupCompile.lref
+C:\Users\galen\Source\Repos\ImageViewer\ImageViewer\ImageViewer\obj\Debug\MainWindow.baml
+C:\Users\galen\Source\Repos\ImageViewer\ImageViewer\ImageViewer\obj\Debug\ImageViewer.g.resources
+C:\Users\galen\Source\Repos\ImageViewer\ImageViewer\ImageViewer\obj\Debug\ImageViewer.Properties.Resources.resources
+C:\Users\galen\Source\Repos\ImageViewer\ImageViewer\ImageViewer\obj\Debug\ImageViewer.csproj.GenerateResource.Cache
+C:\Users\galen\Source\Repos\ImageViewer\ImageViewer\ImageViewer\obj\Debug\ImageViewer.exe
+C:\Users\galen\Source\Repos\ImageViewer\ImageViewer\ImageViewer\obj\Debug\ImageViewer.pdb

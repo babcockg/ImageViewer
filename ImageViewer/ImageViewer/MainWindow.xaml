@@ -6,14 +6,21 @@
         xmlns:local="clr-namespace:ImageViewer"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
-
     <Window.ContextMenu>
         <ContextMenu>
-            <MenuItem Header="Paste" Command="ApplicationCommands.Paste" Click="MenuItem_Click" IsEnabled="True"/>
-            <MenuItem Header="Exit" Command="ApplicationCommands.Stop" Click="MenuItem_Click" IsEnabled="True"/>
+            <MenuItem Header="Paste" 
+                      Command="ApplicationCommands.Paste"
+                      Click="MenuItem_Click"
+                      IsEnabled="True"
+                      InputGestureText="Ctrl-V"/>
+            <MenuItem Header="Exit" 
+                      Command="ApplicationCommands.Stop" 
+                      Click="MenuItem_Click" 
+                      IsEnabled="True"
+                      InputGestureText="Ctrl-Q"/>
         </ContextMenu>
     </Window.ContextMenu>
- 
+
     <Grid Name="ImageGrid" 
           Background="#FF808080"
           AllowDrop="true"
@@ -25,7 +32,7 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
-        <Image x:Name="image">
+        <Image x:Name="image" RenderTransformOrigin="0.5,0.5">
             <Image.Source>
                 <BitmapImage UriSource="/images/halloween 2.jpg"/>
             </Image.Source>
